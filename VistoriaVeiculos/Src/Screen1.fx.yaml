@@ -1,0 +1,141 @@
+"Screen1 As screen.'phoneLayout_Success_ver3.0'":
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+
+    iconCircle1 As circle.Circle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =1
+
+    iconCheck1 As icon.Check:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =iconCircle1.Height
+        Icon: =Icon.Check
+        OnSelect: |-
+            =ForAll(DataCardValue6.SelectedItems.Value,
+                Patch(VistoriaCarros,
+                Defaults(VistoriaCarros),
+                {
+                    Acessórios:DataCardValue6
+                }
+            )
+            );
+        PaddingBottom: =Self.PaddingTop
+        PaddingLeft: =Self.PaddingTop
+        PaddingRight: =Self.PaddingTop
+        PaddingTop: =18
+        PressedFill: =RGBA(255, 255, 255, 0.3)
+        Width: =iconCircle1.Width
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =2
+
+    LblSuccessMsg1 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =iconCircle1.Height
+        Size: =21
+        Text: ="Isso foi concluído com êxito"
+        Width: =Parent.Width * 0.75
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =iconCheck1.Y + iconCheck1.Height + 100
+        ZIndex: =3
+
+    Rec1 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        BorderStyle: =Solid
+        BorderThickness: =1
+        Fill: =If(Slider <=10, RGBA(255, 255, 255, 1))
+        Height: =50
+        Width: =30
+        X: =178
+        Y: =792
+        ZIndex: =4
+
+    Rec2 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        BorderThickness: =1
+        Fill: =If(Slider <=20, RGBA(255, 255, 255, 1))
+        Height: =50
+        Width: =30
+        X: =218
+        Y: =792
+        ZIndex: =11
+
+    Rec3 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        BorderThickness: =1
+        Fill: |
+            =If(Slider <=30, RGBA(255, 255, 255, 1))
+        Height: =50
+        Width: =30
+        X: =258
+        Y: =792
+        ZIndex: =12
+
+    Rec4 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        BorderThickness: =1
+        Fill: =If(Slider <=40, RGBA(255, 255, 255, 1))
+        Height: =50
+        Width: =30
+        X: =298
+        Y: =792
+        ZIndex: =13
+
+    Rec5 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        BorderThickness: =1
+        Fill: |
+            =If(Slider <=50, RGBA(255, 255, 255, 1))
+        Height: =50
+        Width: =30
+        X: =340
+        Y: =792
+        ZIndex: =14
+
+    Slider As slider:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Default: =Value(dataValue)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        HandleFill: =RGBA(255, 255, 255, 1)
+        HandleSize: =25
+        Height: =62
+        Max: =60
+        OnChange: |-
+            =UpdateContext({dataValue: Slider.Value})
+        RailFill: =RGBA(128, 130, 133, 1)
+        ValueFill: =RGBA(32, 54, 71, 1)
+        Width: =210
+        X: =172
+        Y: =730
+        ZIndex: =15
+
+    TextInput1 As text:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Text(dataValue)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =80
+        HoverBorderColor: =RGBA(32, 54, 71, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
+        OnChange: |-
+            =UpdateContext({dataValue: Value(TextInput1.Text)})
+        Size: =21
+        Width: =288
+        X: =133
+        Y: =966
+        ZIndex: =16
+

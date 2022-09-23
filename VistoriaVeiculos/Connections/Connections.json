@@ -1,0 +1,50 @@
+{
+  "24ddd771-76b7-428f-869b-c6fa402429c1": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1596/1.0.1596.2995/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "24ddd771-76b7-428f-869b-c6fa402429c1"
+  },
+  "2ed39ec4-8382-4934-b224-269e0ad8ba6d": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1591/1.0.1591.2961/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://fiebedu.sharepoint.com/sites/appreservaveiculos": {
+        "dataSources": {
+          "VistoriaCarros": {
+            "tableName": "973fbee4-7d16-4cff-b881-dfa6be100814"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "VistoriaCarros"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "2ed39ec4-8382-4934-b224-269e0ad8ba6d"
+  }
+}
