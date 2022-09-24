@@ -93,11 +93,11 @@
     "Id": "341ef48d-455f-4fbb-8a9a-69d845975d36",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Reserva de Carros",
+    "Name": "Reserva de Veículo",
     "OriginatingVersion": "1.323"
   },
   "PublishInfo": {
-    "AppName": "Reserva de Carros",
+    "AppName": "Reserva de Veículo",
     "BackgroundColor": "rgba(255, 255, 255, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",
